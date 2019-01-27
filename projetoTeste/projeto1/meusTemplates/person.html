@@ -12,7 +12,10 @@
   <div id="root">
     <ul>
      {% for pessoa in persons %}
-      <li><a href="{% url 'personUpdate' pessoa.id %}">{{pessoa.first_name}}</a></li>
+      <li>
+        <a href="{% url 'personUpdate' pessoa.id %}">{{pessoa.first_name}}</a>
+        <a href="{% url 'personDelete' pessoa.id %}">Deletar</a>
+      </li>
       {% endfor %}
    </ul>
   </div>
