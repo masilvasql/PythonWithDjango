@@ -118,8 +118,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/' #url que vai exportar os arquivos estáticos
 
-STATICFILES_DIRS = [
+STATICFILES_DIRS = [  #carrega a pasta de arquivos estáticos
     'estaticos',
 ]
+
+#carrega os arquivos de media
+MEDIA_URL = '/media/'
+
+MEDIA_ROOT = 'media' #pasta onde será salvo os arquivos de media
