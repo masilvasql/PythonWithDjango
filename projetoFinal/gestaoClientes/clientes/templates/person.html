@@ -9,6 +9,9 @@
 
 <body>
   <h1>Listagem</h1>
+  {% if user.is_authenticated %}
+    <p>Olá {{user.username}}</p>
+  {% endif %}
   <div id="root">
     <a href="{% url 'logout' %}">Sair</a>
     <ul>
