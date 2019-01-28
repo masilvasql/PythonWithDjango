@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Confirmação</title>
+  </head>
+  <body>
+    <h1>Tem ceteza que deseja deletar este Registro? {{person.first_name}} {{person.last_name}} </h1>
+    <form  method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <button type="submit" name="button">Deletar</button>
+    </form>
+  </body>
+</html>

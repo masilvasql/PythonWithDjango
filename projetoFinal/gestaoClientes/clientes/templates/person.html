@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listagem de Clientes</title>
+</head>
+
+<body>
+  <h1>Listagem</h1>
+  <div id="root">
+    <a href="{% url 'logout' %}">Sair</a>
+    <ul>
+     {% for pessoa in persons %}
+      <li>
+        <a href="{% url 'personUpdate' pessoa.id %}">{{pessoa.first_name}}</a>
+        <a href="{% url 'personDelete' pessoa.id %}">Deletar</a>
+      </li>
+      {% endfor %}
+   </ul>
+  </div>
+  <a href="{% url 'personNew' %}">Novo Cliente</a>
+</body>
+
+</html>
