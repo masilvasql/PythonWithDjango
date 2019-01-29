@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Home</title>
-  </head>
-  <body>
-    <h1>Seja Bem Vindo</h1>
-    {% if user.is_authenticated %}
-      <p>Olá {{user.username}}</p>
-      <a href="{% url 'logout' %}">Sair</a>
-    {% else %}
-      <a href="{% url 'login' %}">Entrar</a>
-    {% endif %}
-  </body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %} Seja Bem Vindo {% endblock %}
+
+{%  block main  %}
+  <h1>Seja Bem Vindo</h1>
+  {% if user.is_authenticated %}
+    <p>Olá {{user.username}}</p>
+    <a href="{% url 'logout' %}">Sair</a>
+  {% else %}
+    <a href="{% url 'login' %}">Entrar</a>
+  {% endif %}
+
+{% endblock %}
